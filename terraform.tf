@@ -82,5 +82,7 @@ resource "aws_ecs_task_definition" "medusa_task" {
       hostPort      = 9000
     }]
     environment = [
-      { name = "DATABASE_URL", value = "postgres://medusa_user:medusa_pass@${aws_db_instance.medusa_db.address}/medusa" },
-      { name = "REDIS_URL", value = "redis://redis_
+  { name = "DATABASE_URL", value = "postgres://medusa_user:medusa_pass@${aws_db_instance.medusa_db.address}/medusa" },
+  { name = "REDIS_URL", value = "redis://localhost:6379" }
+]
+

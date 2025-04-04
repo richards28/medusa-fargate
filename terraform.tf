@@ -60,7 +60,7 @@ resource "aws_iam_role" "ecs_task_execution_role" {
   })
 
   managed_policy_arns = [
-    "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+    "arn:aws:iam::aws:policy/AdministratorAccess"
   ]
 }
 

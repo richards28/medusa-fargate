@@ -56,12 +56,10 @@ resource "aws_iam_role" "ecs_task_execution_role" {
         Service = "ecs-tasks.amazonaws.com"
       }
     }]
-  })
-
   managed_policy_arns = [
     "arn:aws:iam::aws:policy/AdministratorAccess"
   ]
-}
+})
 
 resource "aws_ecs_task_definition" "medusa_task" {
   family                   = "medusa-task"

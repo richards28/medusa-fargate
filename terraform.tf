@@ -154,6 +154,7 @@ resource "aws_security_group" "medusa_sg" {
   }
 }
 
-output "medusa_instance_ip" {
-  value = aws_instance.medusa.public_ip
+output "medusa_task_public_ip" {
+  value = aws_ecs_service.medusa_service.network_configuration[0].assign_public_ip
 }
+
